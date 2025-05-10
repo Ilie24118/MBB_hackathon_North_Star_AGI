@@ -8,6 +8,10 @@ A Flask web application that helps users find pubs in Antwerp, Belgium that matc
 
 Vibe Beer Finder combines geolocation data with generative AI to help users discover pubs in Antwerp that match their specific mood or "vibe". Whether you're looking for something cozy, lively, historic, or hipster, the application will find the perfect pub for your current mood.
 
+Check out our DEMO live here.
+
+<h2> <a href="[url](http://34.79.62.121/)">LIVE DEMO</a> </h2>
+
 ## ✨ Features
 
 - Find pubs nearest to your current location in Antwerp
