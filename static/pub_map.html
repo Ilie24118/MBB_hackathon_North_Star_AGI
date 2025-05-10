@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_344e7411781f7bceaa65f82b12cffad4 {
+                #map_e2daaac99011744be744474df29327aa {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -42,16 +42,16 @@
 <body>
     
     
-            <div class="folium-map" id="map_344e7411781f7bceaa65f82b12cffad4" ></div>
+            <div class="folium-map" id="map_e2daaac99011744be744474df29327aa" ></div>
         
 </body>
 <script>
     
     
-            var map_344e7411781f7bceaa65f82b12cffad4 = L.map(
-                "map_344e7411781f7bceaa65f82b12cffad4",
+            var map_e2daaac99011744be744474df29327aa = L.map(
+                "map_e2daaac99011744be744474df29327aa",
                 {
-                    center: [51.225497, 4.4010223],
+                    center: [51.2213, 4.4151],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 15,
@@ -66,7 +66,7 @@
 
         
     
-            var tile_layer_a858dac2c5bb50f718645689ac2b3039 = L.tileLayer(
+            var tile_layer_8a22c842eb00862b1b15a6612729210b = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -83,17 +83,17 @@
             );
         
     
-            tile_layer_a858dac2c5bb50f718645689ac2b3039.addTo(map_344e7411781f7bceaa65f82b12cffad4);
+            tile_layer_8a22c842eb00862b1b15a6612729210b.addTo(map_e2daaac99011744be744474df29327aa);
         
     
-            var marker_21b6b51ab7d8f287890f173e4bdd1c97 = L.marker(
-                [51.225497, 4.4010223],
+            var marker_d5934b67a376912154ea64e4195581f6 = L.marker(
+                [51.2213, 4.4151],
                 {
 }
-            ).addTo(map_344e7411781f7bceaa65f82b12cffad4);
+            ).addTo(map_e2daaac99011744be744474df29327aa);
         
     
-            var icon_e8f36cf9f62199f0e3476789cbd1be6c = L.AwesomeMarkers.icon(
+            var icon_24d1adf4acff293cb44739cb1190bc66 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -104,40 +104,154 @@
             );
         
     
-        var popup_6a4ba4b1b864892b1de947b9647e002d = L.popup({
+        var popup_8ad2ef4de1956bf19a885421f5a8529e = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_156cf44ecd16e515bdc20821a4e9f231 = $(`<div id="html_156cf44ecd16e515bdc20821a4e9f231" style="width: 100.0%; height: 100.0%;">Your Location</div>`)[0];
-                popup_6a4ba4b1b864892b1de947b9647e002d.setContent(html_156cf44ecd16e515bdc20821a4e9f231);
+                var html_4e7914b57785bd6892241e587124d21d = $(`<div id="html_4e7914b57785bd6892241e587124d21d" style="width: 100.0%; height: 100.0%;">Your Location</div>`)[0];
+                popup_8ad2ef4de1956bf19a885421f5a8529e.setContent(html_4e7914b57785bd6892241e587124d21d);
             
         
 
-        marker_21b6b51ab7d8f287890f173e4bdd1c97.bindPopup(popup_6a4ba4b1b864892b1de947b9647e002d)
+        marker_d5934b67a376912154ea64e4195581f6.bindPopup(popup_8ad2ef4de1956bf19a885421f5a8529e)
         ;
 
         
     
     
-                marker_21b6b51ab7d8f287890f173e4bdd1c97.setIcon(icon_e8f36cf9f62199f0e3476789cbd1be6c);
+                marker_d5934b67a376912154ea64e4195581f6.setIcon(icon_24d1adf4acff293cb44739cb1190bc66);
             
     
-            var marker_cluster_2c0c8968c5eac50fac36c9a052c79e40 = L.markerClusterGroup(
+            var marker_cluster_fa46ddc2cdf5f95896219a92f3d4a8ab = L.markerClusterGroup(
                 {
 }
             );
         
     
-            var marker_2c5411ff7aa688c578acb075ab65679e = L.marker(
-                [51.225456, 4.4014081],
+            var marker_0e9c59d11a5768c1b64ecfbecf154280 = L.marker(
+                [51.221534, 4.4138209],
                 {
 }
-            ).addTo(marker_cluster_2c0c8968c5eac50fac36c9a052c79e40);
+            ).addTo(marker_cluster_fa46ddc2cdf5f95896219a92f3d4a8ab);
         
     
-            var icon_0e44909ee7a04febb97ece027d558e84 = L.AwesomeMarkers.icon(
+            var icon_e2a3509ebe44ffc85618a2ec6e9c88fd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "beer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b1c9cd4dc98bf235914a5ec192fe3833 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7711e1e5496332fddd5fc9880ad91343 = $(`<div id="html_7711e1e5496332fddd5fc9880ad91343" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Spoor 8<br><b>Distance:</b> 0.09 km<br><b>amenity:</b> pub<br><b>toilets:wheelchair:</b> no<br><b>wheelchair:</b> limited<br></div>`)[0];
+                popup_b1c9cd4dc98bf235914a5ec192fe3833.setContent(html_7711e1e5496332fddd5fc9880ad91343);
+            
+        
+
+        marker_0e9c59d11a5768c1b64ecfbecf154280.bindPopup(popup_b1c9cd4dc98bf235914a5ec192fe3833)
+        ;
+
+        
+    
+    
+                marker_0e9c59d11a5768c1b64ecfbecf154280.setIcon(icon_e2a3509ebe44ffc85618a2ec6e9c88fd);
+            
+    
+            var marker_bca9e70c3ddb82caad6ed7bd02aac329 = L.marker(
+                [51.2215754, 4.4136209],
+                {
+}
+            ).addTo(marker_cluster_fa46ddc2cdf5f95896219a92f3d4a8ab);
+        
+    
+            var icon_297533fad0bcd836142e5bb1c0c0b167 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "beer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_63e8b35090a9b7768df7d6532192b3ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2dda3a2721d0beaf44cd86358fea71ed = $(`<div id="html_2dda3a2721d0beaf44cd86358fea71ed" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Kassa 4<br><b>Distance:</b> 0.11 km<br><b>addr:city:</b> Antwerpen<br><b>addr:housenumber:</b> 21<br><b>addr:postcode:</b> 2000<br><b>addr:street:</b> Ossenmarkt<br><b>amenity:</b> pub<br><b>opening_hours:</b> Mo-Fr 08:00+; Sa,Su 12:00+<br><b>outdoor_seating:</b> yes<br><b>smoking:</b> separated<br></div>`)[0];
+                popup_63e8b35090a9b7768df7d6532192b3ac.setContent(html_2dda3a2721d0beaf44cd86358fea71ed);
+            
+        
+
+        marker_bca9e70c3ddb82caad6ed7bd02aac329.bindPopup(popup_63e8b35090a9b7768df7d6532192b3ac)
+        ;
+
+        
+    
+    
+                marker_bca9e70c3ddb82caad6ed7bd02aac329.setIcon(icon_297533fad0bcd836142e5bb1c0c0b167);
+            
+    
+            var marker_1ce8545a4e5d293d463d79fd29444e52 = L.marker(
+                [51.2200268, 4.4148356],
+                {
+}
+            ).addTo(marker_cluster_fa46ddc2cdf5f95896219a92f3d4a8ab);
+        
+    
+            var icon_15e6fb88070942e872dd6b2cd0a7791f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "beer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e18d7d09a9699f7b52ac682189c3bf8e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_79db1b041b7f77892209e13a62b4f9df = $(`<div id="html_79db1b041b7f77892209e13a62b4f9df" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Den engel<br><b>Distance:</b> 0.14 km<br><b>amenity:</b> pub<br><b>check_date:</b> 2024-08-24<br></div>`)[0];
+                popup_e18d7d09a9699f7b52ac682189c3bf8e.setContent(html_79db1b041b7f77892209e13a62b4f9df);
+            
+        
+
+        marker_1ce8545a4e5d293d463d79fd29444e52.bindPopup(popup_e18d7d09a9699f7b52ac682189c3bf8e)
+        ;
+
+        
+    
+    
+                marker_1ce8545a4e5d293d463d79fd29444e52.setIcon(icon_15e6fb88070942e872dd6b2cd0a7791f);
+            
+    
+            var marker_fb83d2c95668687aefeb9c17f2d487b2 = L.marker(
+                [51.2222428, 4.4133605],
+                {
+}
+            ).addTo(marker_cluster_fa46ddc2cdf5f95896219a92f3d4a8ab);
+        
+    
+            var icon_bf302d1711d3626c4a3a6848f9c0973d = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -148,34 +262,34 @@
             );
         
     
-        var popup_bb1619735bb8b8c97e917343eaf366d7 = L.popup({
+        var popup_c674d2dce639f61467c8769df619b26c = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_0298672dcda809a7293bed816bc441c0 = $(`<div id="html_0298672dcda809a7293bed816bc441c0" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Coyote Café<br><b>Distance:</b> 0.03 km<br><b>Matches Your Vibe:</b> API key not set. Unable to match vibe.<br><b>addr:city:</b> Antwerpen<br><b>addr:housenumber:</b> 1<br><b>addr:postcode:</b> 2000<br><b>addr:street:</b> Sint-Paulusplaats<br><b>amenity:</b> pub<br><b>outdoor_seating:</b> yes<br></div>`)[0];
-                popup_bb1619735bb8b8c97e917343eaf366d7.setContent(html_0298672dcda809a7293bed816bc441c0);
+                var html_d64370b40fe3215dc83c996dec290577 = $(`<div id="html_d64370b40fe3215dc83c996dec290577" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Barracuda<br><b>Distance:</b> 0.16 km<br><b>Matches Your Vibe:</b> Barracuda generally suggests a lively, possibly themed (nautical/beach) atmosphere. The name evokes a sense of energy and excitement, which aligns well with the "lively" vibe. It's more likely to be a place with music, decorations, and a generally energetic atmosphere compared to the other options which seem more traditional or niche.<br><b>addr:housenumber:</b> 1<br><b>addr:street:</b> Ossenmarkt<br><b>amenity:</b> pub<br></div>`)[0];
+                popup_c674d2dce639f61467c8769df619b26c.setContent(html_d64370b40fe3215dc83c996dec290577);
             
         
 
-        marker_2c5411ff7aa688c578acb075ab65679e.bindPopup(popup_bb1619735bb8b8c97e917343eaf366d7)
+        marker_fb83d2c95668687aefeb9c17f2d487b2.bindPopup(popup_c674d2dce639f61467c8769df619b26c)
         ;
 
         
     
     
-                marker_2c5411ff7aa688c578acb075ab65679e.setIcon(icon_0e44909ee7a04febb97ece027d558e84);
+                marker_fb83d2c95668687aefeb9c17f2d487b2.setIcon(icon_bf302d1711d3626c4a3a6848f9c0973d);
             
     
-            var marker_fc5c5b126ae003d8df146f83e0228197 = L.marker(
-                [51.2252576, 4.4017801],
+            var marker_a8a562d1f464f313bf7331144a20804b = L.marker(
+                [51.2199223, 4.4143642],
                 {
 }
-            ).addTo(marker_cluster_2c0c8968c5eac50fac36c9a052c79e40);
+            ).addTo(marker_cluster_fa46ddc2cdf5f95896219a92f3d4a8ab);
         
     
-            var icon_b7f3e6bd6e832b8a6a48891852f71585 = L.AwesomeMarkers.icon(
+            var icon_1197899d3e6dc216de4f671a1bdcd414 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -186,141 +300,27 @@
             );
         
     
-        var popup_386198d76e3f46bb6b27e8bf34e6519e = L.popup({
+        var popup_08b27598d47ab14ac1345cf1ec5d6461 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_d88ec9d0671e244a896573ec90ade7a9 = $(`<div id="html_d88ec9d0671e244a896573ec90ade7a9" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Mallebabbe<br><b>Distance:</b> 0.06 km<br><b>addr:city:</b> Antwerpen<br><b>addr:housenumber:</b> 4<br><b>addr:postcode:</b> 2000<br><b>addr:street:</b> Sint-Paulusplaats<br><b>amenity:</b> pub<br><b>cuisine:</b> local<br><b>entrance:kerb:height:</b> 0.1<br><b>entrance:step_count:</b> 1.0<br><b>entrance:width:</b> 1.35<br><b>internet_access:</b> wlan<br><b>outdoor_seating:</b> yes<br></div>`)[0];
-                popup_386198d76e3f46bb6b27e8bf34e6519e.setContent(html_d88ec9d0671e244a896573ec90ade7a9);
+                var html_91190f3006fb5d74aaa5957446aeaf7f = $(`<div id="html_91190f3006fb5d74aaa5957446aeaf7f" style="width: 100.0%; height: 100.0%;"><b>Name:</b> The Geeky Cauldron<br><b>Distance:</b> 0.16 km<br><b>amenity:</b> pub<br><b>email:</b> cafethegeekycauldron@gmail.com<br><b>opening_hours:</b> Tu-Th 16:00-00:00<br><b>panoramax:</b> 59744cb0-08b4-49ac-b015-66c04d6f7976<br></div>`)[0];
+                popup_08b27598d47ab14ac1345cf1ec5d6461.setContent(html_91190f3006fb5d74aaa5957446aeaf7f);
             
         
 
-        marker_fc5c5b126ae003d8df146f83e0228197.bindPopup(popup_386198d76e3f46bb6b27e8bf34e6519e)
+        marker_a8a562d1f464f313bf7331144a20804b.bindPopup(popup_08b27598d47ab14ac1345cf1ec5d6461)
         ;
 
         
     
     
-                marker_fc5c5b126ae003d8df146f83e0228197.setIcon(icon_b7f3e6bd6e832b8a6a48891852f71585);
+                marker_a8a562d1f464f313bf7331144a20804b.setIcon(icon_1197899d3e6dc216de4f671a1bdcd414);
             
     
-            var marker_ec270c5c5a7666f56f5928c5abe850a7 = L.marker(
-                [51.2249666, 4.4006992],
-                {
-}
-            ).addTo(marker_cluster_2c0c8968c5eac50fac36c9a052c79e40);
-        
-    
-            var icon_3da633b84d93792a3992b3b5406fad46 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "green",
-  "iconColor": "white",
-  "icon": "beer",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_fd3be984f7f2e3a685fab81487bbb3e9 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_4efb356301f3ac524720e948bb67bfb2 = $(`<div id="html_4efb356301f3ac524720e948bb67bfb2" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Tango<br><b>Distance:</b> 0.06 km<br><b>addr:housenumber:</b> 26<br><b>addr:street:</b> Sint-Paulusplaats<br><b>amenity:</b> pub<br><b>entrance:kerb:height:</b> 0.02<br><b>entrance:step_count:</b> 1<br><b>entrance:width:</b> 1.08<br><b>wheelchair:turning_circle:</b> yes<br></div>`)[0];
-                popup_fd3be984f7f2e3a685fab81487bbb3e9.setContent(html_4efb356301f3ac524720e948bb67bfb2);
-            
-        
-
-        marker_ec270c5c5a7666f56f5928c5abe850a7.bindPopup(popup_fd3be984f7f2e3a685fab81487bbb3e9)
-        ;
-
-        
-    
-    
-                marker_ec270c5c5a7666f56f5928c5abe850a7.setIcon(icon_3da633b84d93792a3992b3b5406fad46);
-            
-    
-            var marker_c598928a6e92d566c5af7cca9cc590f1 = L.marker(
-                [51.224779, 4.4011597],
-                {
-}
-            ).addTo(marker_cluster_2c0c8968c5eac50fac36c9a052c79e40);
-        
-    
-            var icon_d05faf34c2e72d9be90128849f9e1842 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "green",
-  "iconColor": "white",
-  "icon": "beer",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_969e5fb1a471c98b7123bfc9855d7620 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_177518efe53df90e86cc51f64d108c8b = $(`<div id="html_177518efe53df90e86cc51f64d108c8b" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Cafe Amberes<br><b>Distance:</b> 0.08 km<br><b>amenity:</b> pub<br><b>website:</b> https://cafe-tapas-bar-amberes.webnode.be/<br></div>`)[0];
-                popup_969e5fb1a471c98b7123bfc9855d7620.setContent(html_177518efe53df90e86cc51f64d108c8b);
-            
-        
-
-        marker_c598928a6e92d566c5af7cca9cc590f1.bindPopup(popup_969e5fb1a471c98b7123bfc9855d7620)
-        ;
-
-        
-    
-    
-                marker_c598928a6e92d566c5af7cca9cc590f1.setIcon(icon_d05faf34c2e72d9be90128849f9e1842);
-            
-    
-            var marker_28c25a540a1f5fde04fa16c1a6b5d8f9 = L.marker(
-                [51.225687, 4.4022858],
-                {
-}
-            ).addTo(marker_cluster_2c0c8968c5eac50fac36c9a052c79e40);
-        
-    
-            var icon_2d8fd221adb185fffab9ff63d062fb07 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "green",
-  "iconColor": "white",
-  "icon": "beer",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_eb22251eb28aa5c0c6d77f50741d74ab = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_817af4b6a629aa6c9cc09b11d8d6ee07 = $(`<div id="html_817af4b6a629aa6c9cc09b11d8d6ee07" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Royal VIP cafe<br><b>Distance:</b> 0.09 km<br><b>amenity:</b> pub<br><b>comment:</b> no dogs allowed<br><b>entrance:kerb:height:</b> 0.02<br><b>entrance:step_count:</b> 1<br><b>entrance:width:</b> 0.94<br></div>`)[0];
-                popup_eb22251eb28aa5c0c6d77f50741d74ab.setContent(html_817af4b6a629aa6c9cc09b11d8d6ee07);
-            
-        
-
-        marker_28c25a540a1f5fde04fa16c1a6b5d8f9.bindPopup(popup_eb22251eb28aa5c0c6d77f50741d74ab)
-        ;
-
-        
-    
-    
-                marker_28c25a540a1f5fde04fa16c1a6b5d8f9.setIcon(icon_2d8fd221adb185fffab9ff63d062fb07);
-            
-    
-            marker_cluster_2c0c8968c5eac50fac36c9a052c79e40.addTo(map_344e7411781f7bceaa65f82b12cffad4);
+            marker_cluster_fa46ddc2cdf5f95896219a92f3d4a8ab.addTo(map_e2daaac99011744be744474df29327aa);
         
 </script>
 </html>
