@@ -212,7 +212,7 @@
         <div class="card">
           <h2>Find Friends at the Same Pub</h2>
           <p>Click below to join <strong>{{ vibe_match.name }}</strong> pub and see who else is vibing there 🍻</p>
-          <form action="/join_pub" method="POST">
+          <form action="/table" method="GET">
             <input type="hidden" name="pub_id" value="{{ vibe_match.id }}">
             <button type="submit" class="back-btn">Join This Pub</button>
           </form>

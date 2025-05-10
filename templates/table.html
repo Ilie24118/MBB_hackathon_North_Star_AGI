@@ -79,6 +79,36 @@
       background-color: #FFEFD5;
       color: #FF8C00;
     }
+
+        .back-btn {
+      background-color: #FF8C00;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+      text-decoration: none; /* REMOVE UNDERLINE */
+    }
+
+    .back-btn:hover {
+      background-color: #E67E00;
+    }
+
+    .resize {
+      width: 100px;
+      height: auto;
+      border-radius: 10%;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    button.back-btn {
+      width: 100%;
+    }
   </style>
 </head>
 <body>
@@ -95,7 +125,8 @@
         <label for="time">When You'll Arrive</label>
         <input type="time" id="time" required />
 
-        <button type="submit">Add to Timetable</button>
+        <button>Add to Timetable</button>
+        <a href="/" class="back-btn">🔍 New Search</a>
       </form>
     </div>
 

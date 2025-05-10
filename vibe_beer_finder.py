@@ -311,6 +311,10 @@ def get_pubs_api():
     except Exception as e:
         return jsonify({"error": str(e)})
 
+@app.route('/table')
+def hello_world():
+    return render_template('table.html')
+
 if __name__ == '__main__':
     # Create necessary directories
     os.makedirs('static', exist_ok=True)
