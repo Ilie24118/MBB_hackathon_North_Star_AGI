@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_b5b0e65ffe15cea9aff2e1552887caaf {
+                #map_dd53a9b9059a2ec661274e2c704bd725 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -42,14 +42,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_b5b0e65ffe15cea9aff2e1552887caaf" ></div>
+            <div class="folium-map" id="map_dd53a9b9059a2ec661274e2c704bd725" ></div>
         
 </body>
 <script>
     
     
-            var map_b5b0e65ffe15cea9aff2e1552887caaf = L.map(
-                "map_b5b0e65ffe15cea9aff2e1552887caaf",
+            var map_dd53a9b9059a2ec661274e2c704bd725 = L.map(
+                "map_dd53a9b9059a2ec661274e2c704bd725",
                 {
                     center: [51.2192, 4.3917],
                     crs: L.CRS.EPSG3857,
@@ -66,7 +66,7 @@
 
         
     
-            var tile_layer_4f41994729b951bd4493a01ec1b84972 = L.tileLayer(
+            var tile_layer_eca72087208a0ab3ebabbdc8131a2f6a = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -83,17 +83,17 @@
             );
         
     
-            tile_layer_4f41994729b951bd4493a01ec1b84972.addTo(map_b5b0e65ffe15cea9aff2e1552887caaf);
+            tile_layer_eca72087208a0ab3ebabbdc8131a2f6a.addTo(map_dd53a9b9059a2ec661274e2c704bd725);
         
     
-            var marker_e3f5328312bc24cbb1750659dbd30b7d = L.marker(
+            var marker_e7e03940901abcca6f2417cc34c05612 = L.marker(
                 [51.2192, 4.3917],
                 {
 }
-            ).addTo(map_b5b0e65ffe15cea9aff2e1552887caaf);
+            ).addTo(map_dd53a9b9059a2ec661274e2c704bd725);
         
     
-            var icon_1e83d67db72a32af2ab72726ad52087e = L.AwesomeMarkers.icon(
+            var icon_d3c00e77f0e2e7e47a31ff52be28d4ac = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -104,40 +104,116 @@
             );
         
     
-        var popup_372af0e9f09059add7ac9877cbe83111 = L.popup({
+        var popup_ef8c29323e6f7c9aea5bbf35ca1c671a = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_08b79cf01963c4c77a7c1c7484a4fda0 = $(`<div id="html_08b79cf01963c4c77a7c1c7484a4fda0" style="width: 100.0%; height: 100.0%;">Your Location</div>`)[0];
-                popup_372af0e9f09059add7ac9877cbe83111.setContent(html_08b79cf01963c4c77a7c1c7484a4fda0);
+                var html_1363c2c952cf732934b3bbb92969b728 = $(`<div id="html_1363c2c952cf732934b3bbb92969b728" style="width: 100.0%; height: 100.0%;">Your Location</div>`)[0];
+                popup_ef8c29323e6f7c9aea5bbf35ca1c671a.setContent(html_1363c2c952cf732934b3bbb92969b728);
             
         
 
-        marker_e3f5328312bc24cbb1750659dbd30b7d.bindPopup(popup_372af0e9f09059add7ac9877cbe83111)
+        marker_e7e03940901abcca6f2417cc34c05612.bindPopup(popup_ef8c29323e6f7c9aea5bbf35ca1c671a)
         ;
 
         
     
     
-                marker_e3f5328312bc24cbb1750659dbd30b7d.setIcon(icon_1e83d67db72a32af2ab72726ad52087e);
+                marker_e7e03940901abcca6f2417cc34c05612.setIcon(icon_d3c00e77f0e2e7e47a31ff52be28d4ac);
             
     
-            var marker_cluster_d39cbcb20d99b9439bc176520a7d144c = L.markerClusterGroup(
+            var marker_cluster_b53814448d260e59a109ed371653616e = L.markerClusterGroup(
                 {
 }
             );
         
     
-            var marker_d251c122516336017625fcb8c32d7ed4 = L.marker(
+            var marker_1e4d7567614bacc42c5857594e9e46b4 = L.marker(
                 [51.2177228, 4.3949476],
                 {
 }
-            ).addTo(marker_cluster_d39cbcb20d99b9439bc176520a7d144c);
+            ).addTo(marker_cluster_b53814448d260e59a109ed371653616e);
         
     
-            var icon_989d102e440682c12c69ca875d9f5501 = L.AwesomeMarkers.icon(
+            var icon_55b76efc2f0d63108bcec0e6178181c4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "beer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c593f21d6d1973ec2f880257b48ac73b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eafe887f47549540ee6fd6e367bfa76a = $(`<div id="html_eafe887f47549540ee6fd6e367bfa76a" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Crazy J<br><b>Distance:</b> 0.28 km<br><b>amenity:</b> pub<br><b>internet_access:</b> wlan<br><b>internet_access:fee:</b> yes<br><b>outdoor_seating:</b> yes<br><b>website:</b> https://crazyjantwerp.com<br><b>wheelchair:</b> limited<br></div>`)[0];
+                popup_c593f21d6d1973ec2f880257b48ac73b.setContent(html_eafe887f47549540ee6fd6e367bfa76a);
+            
+        
+
+        marker_1e4d7567614bacc42c5857594e9e46b4.bindPopup(popup_c593f21d6d1973ec2f880257b48ac73b)
+        ;
+
+        
+    
+    
+                marker_1e4d7567614bacc42c5857594e9e46b4.setIcon(icon_55b76efc2f0d63108bcec0e6178181c4);
+            
+    
+            var marker_39284901e64da79d7affa10694111f82 = L.marker(
+                [51.2189185, 4.3963179],
+                {
+}
+            ).addTo(marker_cluster_b53814448d260e59a109ed371653616e);
+        
+    
+            var icon_7133a6155a341cb96febcef1ded81b66 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "beer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_74ea63bd71a619255edfeea3c241535a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e1cd0c5f4e09321850a60e3c27905705 = $(`<div id="html_e1cd0c5f4e09321850a60e3c27905705" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Het Zand<br><b>Distance:</b> 0.32 km<br><b>amenity:</b> pub<br><b>check_date:</b> 2023-04-08<br><b>outdoor_seating:</b> yes<br><b>website:</b> https://hetzand.be<br></div>`)[0];
+                popup_74ea63bd71a619255edfeea3c241535a.setContent(html_e1cd0c5f4e09321850a60e3c27905705);
+            
+        
+
+        marker_39284901e64da79d7affa10694111f82.bindPopup(popup_74ea63bd71a619255edfeea3c241535a)
+        ;
+
+        
+    
+    
+                marker_39284901e64da79d7affa10694111f82.setIcon(icon_7133a6155a341cb96febcef1ded81b66);
+            
+    
+            var marker_b3d9efb079aaec9bd5a161aa4f624534 = L.marker(
+                [51.218887, 4.3964132],
+                {
+}
+            ).addTo(marker_cluster_b53814448d260e59a109ed371653616e);
+        
+    
+            var icon_01e20be1f17cf772bb46857f31ca850c = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -148,110 +224,34 @@
             );
         
     
-        var popup_89cc98072b8b85578daf08828efe614f = L.popup({
+        var popup_aae2119cfe0277cb8afee281780cca14 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_bbb47a7dc88084bb68d1ca174fbb26f5 = $(`<div id="html_bbb47a7dc88084bb68d1ca174fbb26f5" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Crazy J<br><b>Distance:</b> 0.28 km<br><b>Matches Your Vibe:</b> Crazy J, based on its name alone, suggests a high-energy and potentially boisterous atmosphere, aligning well with the "Lively" vibe. It implies a place where things are a bit wild and fun.<br><b>amenity:</b> pub<br><b>internet_access:</b> wlan<br><b>internet_access:fee:</b> yes<br><b>outdoor_seating:</b> yes<br><b>website:</b> https://crazyjantwerp.com<br><b>wheelchair:</b> limited<br></div>`)[0];
-                popup_89cc98072b8b85578daf08828efe614f.setContent(html_bbb47a7dc88084bb68d1ca174fbb26f5);
+                var html_f411733fd8ba3e3209604d646e7672ba = $(`<div id="html_f411733fd8ba3e3209604d646e7672ba" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Den Abjaar<br><b>Distance:</b> 0.33 km<br><b>Matches Your Vibe:</b> Den Abjaar is known for its traditional, old-world charm and intimate atmosphere. It often features a warm and inviting interior, perhaps with wood paneling and comfortable seating, creating a truly cozy vibe.<br><b>amenity:</b> pub<br><b>check_date:</b> 2023-04-08<br><b>outdoor_seating:</b> yes<br><b>website:</b> http://www.denabjaar.be<br></div>`)[0];
+                popup_aae2119cfe0277cb8afee281780cca14.setContent(html_f411733fd8ba3e3209604d646e7672ba);
             
         
 
-        marker_d251c122516336017625fcb8c32d7ed4.bindPopup(popup_89cc98072b8b85578daf08828efe614f)
+        marker_b3d9efb079aaec9bd5a161aa4f624534.bindPopup(popup_aae2119cfe0277cb8afee281780cca14)
         ;
 
         
     
     
-                marker_d251c122516336017625fcb8c32d7ed4.setIcon(icon_989d102e440682c12c69ca875d9f5501);
+                marker_b3d9efb079aaec9bd5a161aa4f624534.setIcon(icon_01e20be1f17cf772bb46857f31ca850c);
             
     
-            var marker_6d18b7d51d95ffe83d7d3901d53b1b08 = L.marker(
-                [51.2189185, 4.3963179],
-                {
-}
-            ).addTo(marker_cluster_d39cbcb20d99b9439bc176520a7d144c);
-        
-    
-            var icon_011ca40312fc3c8c6c27ef3c9032caf7 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "green",
-  "iconColor": "white",
-  "icon": "beer",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_1c2b27e96f1e6f1c29c4ca9756634d20 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_2b2be1c7780cfb4db66f42990b730849 = $(`<div id="html_2b2be1c7780cfb4db66f42990b730849" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Het Zand<br><b>Distance:</b> 0.32 km<br><b>amenity:</b> pub<br><b>check_date:</b> 2023-04-08<br><b>outdoor_seating:</b> yes<br><b>website:</b> https://hetzand.be<br></div>`)[0];
-                popup_1c2b27e96f1e6f1c29c4ca9756634d20.setContent(html_2b2be1c7780cfb4db66f42990b730849);
-            
-        
-
-        marker_6d18b7d51d95ffe83d7d3901d53b1b08.bindPopup(popup_1c2b27e96f1e6f1c29c4ca9756634d20)
-        ;
-
-        
-    
-    
-                marker_6d18b7d51d95ffe83d7d3901d53b1b08.setIcon(icon_011ca40312fc3c8c6c27ef3c9032caf7);
-            
-    
-            var marker_5e3fe1b4a03c26577f973501114f99ae = L.marker(
-                [51.218887, 4.3964132],
-                {
-}
-            ).addTo(marker_cluster_d39cbcb20d99b9439bc176520a7d144c);
-        
-    
-            var icon_d7721991b8a00ca43081d02f8cd40494 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "green",
-  "iconColor": "white",
-  "icon": "beer",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_f5bd798d69970b52791849636cd89b02 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_a0616c05f846b79173439efa112e1895 = $(`<div id="html_a0616c05f846b79173439efa112e1895" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Den Abjaar<br><b>Distance:</b> 0.33 km<br><b>amenity:</b> pub<br><b>check_date:</b> 2023-04-08<br><b>outdoor_seating:</b> yes<br><b>website:</b> http://www.denabjaar.be<br></div>`)[0];
-                popup_f5bd798d69970b52791849636cd89b02.setContent(html_a0616c05f846b79173439efa112e1895);
-            
-        
-
-        marker_5e3fe1b4a03c26577f973501114f99ae.bindPopup(popup_f5bd798d69970b52791849636cd89b02)
-        ;
-
-        
-    
-    
-                marker_5e3fe1b4a03c26577f973501114f99ae.setIcon(icon_d7721991b8a00ca43081d02f8cd40494);
-            
-    
-            var marker_d156aa92ce8ed3bb8dab0d53fa96130e = L.marker(
+            var marker_f3d5ab99305902a823fd929cdd3ca22f = L.marker(
                 [51.2198264, 4.3964706],
                 {
 }
-            ).addTo(marker_cluster_d39cbcb20d99b9439bc176520a7d144c);
+            ).addTo(marker_cluster_b53814448d260e59a109ed371653616e);
         
     
-            var icon_37f14c6c342f53df525dde2ec795126e = L.AwesomeMarkers.icon(
+            var icon_caae3a2cfc35a1e11413c4341924517e = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -262,34 +262,34 @@
             );
         
     
-        var popup_fbd9521083ec4edc9d97bddf05f08c71 = L.popup({
+        var popup_d34cebaa802ac58b590ea169018c6e31 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_2d61e84434cb28ad5716cc8035a2d4b2 = $(`<div id="html_2d61e84434cb28ad5716cc8035a2d4b2" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Café Beveren<br><b>Distance:</b> 0.34 km<br><b>addr:housenumber:</b> 2<br><b>addr:postcode:</b> 2000<br><b>addr:street:</b> Vlasmarkt<br><b>amenity:</b> pub<br><b>check_date:</b> 2024-01-17<br><b>contact:facebook:</b> https://www.facebook.com/cafebeverenantwerpen/<br><b>opening_hours:</b> Th 13:00-00:00, Fr,Sa 13:00-03:00, Su 13:00-01:00<br><b>wheelchair:</b> yes<br></div>`)[0];
-                popup_fbd9521083ec4edc9d97bddf05f08c71.setContent(html_2d61e84434cb28ad5716cc8035a2d4b2);
+                var html_3ba757b6f33b3fa84db7b4cd2273f5b9 = $(`<div id="html_3ba757b6f33b3fa84db7b4cd2273f5b9" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Café Beveren<br><b>Distance:</b> 0.34 km<br><b>addr:housenumber:</b> 2<br><b>addr:postcode:</b> 2000<br><b>addr:street:</b> Vlasmarkt<br><b>amenity:</b> pub<br><b>check_date:</b> 2024-01-17<br><b>contact:facebook:</b> https://www.facebook.com/cafebeverenantwerpen/<br><b>opening_hours:</b> Th 13:00-00:00, Fr,Sa 13:00-03:00, Su 13:00-01:00<br><b>wheelchair:</b> yes<br></div>`)[0];
+                popup_d34cebaa802ac58b590ea169018c6e31.setContent(html_3ba757b6f33b3fa84db7b4cd2273f5b9);
             
         
 
-        marker_d156aa92ce8ed3bb8dab0d53fa96130e.bindPopup(popup_fbd9521083ec4edc9d97bddf05f08c71)
+        marker_f3d5ab99305902a823fd929cdd3ca22f.bindPopup(popup_d34cebaa802ac58b590ea169018c6e31)
         ;
 
         
     
     
-                marker_d156aa92ce8ed3bb8dab0d53fa96130e.setIcon(icon_37f14c6c342f53df525dde2ec795126e);
+                marker_f3d5ab99305902a823fd929cdd3ca22f.setIcon(icon_caae3a2cfc35a1e11413c4341924517e);
             
     
-            var marker_507ccee72208757c90bc54d6fd3f9912 = L.marker(
+            var marker_18ff4932bf0034d34a0f7d84f85016bf = L.marker(
                 [51.218685, 4.3971518],
                 {
 }
-            ).addTo(marker_cluster_d39cbcb20d99b9439bc176520a7d144c);
+            ).addTo(marker_cluster_b53814448d260e59a109ed371653616e);
         
     
-            var icon_4f30222ae8c0d84209eeb229d21e7415 = L.AwesomeMarkers.icon(
+            var icon_054afb16f431aadaba529c2438242d80 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -300,27 +300,27 @@
             );
         
     
-        var popup_3a01a924ffd1a139cc1424c5a1d4dd45 = L.popup({
+        var popup_47aafd1981e6116f8e3b46d7afcdead0 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_47a20d91f80fe51fe3afb1e38df59815 = $(`<div id="html_47a20d91f80fe51fe3afb1e38df59815" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Kleine Tunnel<br><b>Distance:</b> 0.38 km<br><b>amenity:</b> pub<br><b>entrance:kerb:height:</b> 0.05<br><b>entrance:ramp:</b> no<br><b>entrance:step_count:</b> 1<br><b>entrance:width:</b> 0.95<br><b>toilets:wheelchair:</b> no<br><b>wheelchair:turning_circle:</b> yes<br></div>`)[0];
-                popup_3a01a924ffd1a139cc1424c5a1d4dd45.setContent(html_47a20d91f80fe51fe3afb1e38df59815);
+                var html_92f17c49455674721e3700d9d58f5624 = $(`<div id="html_92f17c49455674721e3700d9d58f5624" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Kleine Tunnel<br><b>Distance:</b> 0.38 km<br><b>amenity:</b> pub<br><b>entrance:kerb:height:</b> 0.05<br><b>entrance:ramp:</b> no<br><b>entrance:step_count:</b> 1<br><b>entrance:width:</b> 0.95<br><b>toilets:wheelchair:</b> no<br><b>wheelchair:turning_circle:</b> yes<br></div>`)[0];
+                popup_47aafd1981e6116f8e3b46d7afcdead0.setContent(html_92f17c49455674721e3700d9d58f5624);
             
         
 
-        marker_507ccee72208757c90bc54d6fd3f9912.bindPopup(popup_3a01a924ffd1a139cc1424c5a1d4dd45)
+        marker_18ff4932bf0034d34a0f7d84f85016bf.bindPopup(popup_47aafd1981e6116f8e3b46d7afcdead0)
         ;
 
         
     
     
-                marker_507ccee72208757c90bc54d6fd3f9912.setIcon(icon_4f30222ae8c0d84209eeb229d21e7415);
+                marker_18ff4932bf0034d34a0f7d84f85016bf.setIcon(icon_054afb16f431aadaba529c2438242d80);
             
     
-            marker_cluster_d39cbcb20d99b9439bc176520a7d144c.addTo(map_b5b0e65ffe15cea9aff2e1552887caaf);
+            marker_cluster_b53814448d260e59a109ed371653616e.addTo(map_dd53a9b9059a2ec661274e2c704bd725);
         
 </script>
 </html>

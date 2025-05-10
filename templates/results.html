@@ -57,6 +57,15 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             height: 500px;
         }
+
+        .join-container {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            height: 250px;
+        }
+      
         .map-frame {
             width: 100%;
             height: 100%;
@@ -82,7 +91,7 @@
             border-bottom: none;
         }
         .pub-name {
-            font-weight: bold;
+            map-connt-weight: bold;
             font-size: 1.1rem;
             margin-bottom: 0.5rem;
         }
@@ -124,11 +133,21 @@
             padding: 0.2rem 0.4rem;
             border-radius: 2px;
         }
+
+        .resize {
+            width: 100px;
+            height: auto;
+            border-radius: 10%;
+            display: inline-block;
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
+
         <div class="header">
+            <img class="resize" src="{{url_for('static', filename='logo_beer_finder.jpeg')}}" />
             <h1>Your Perfect Pub Match</h1>
             <p>Based on your <span class="highlight">{{ vibe }}</span> vibe at coordinates [{{ latitude }}, {{ longitude }}]</p>
         </div>
@@ -183,5 +202,17 @@
             </div>
         </div>
     </div>
+
+    <div class="container">
+      <div class="join-container">
+        <h2>Find Friends at the same Pub</h2>
+        <p>Click below to join {{ vibe_match.name }} pub and see who else is vibing there 🍻</p>
+          <form action="/join_pub" method="POST">
+        <input type="hidden" name="pub_id" value="{{ vibe_match.id }}">
+        <button type="submit" class="back-btn">Join This Pub</button>
+        </form>
+      </div>
+    </div>
+
 </body>
 </html>
