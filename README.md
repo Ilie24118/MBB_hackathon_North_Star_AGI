@@ -233,3 +233,11 @@ This project is licensed under the MIT License.
 - [Folium](https://python-visualization.github.io/folium/) for the interactive maps
 - [Flask](https://flask.palletsprojects.com/) for the web framework
 - [Hugging Face Datasets](https://huggingface.co/docs/datasets/index) for the Antwerp OSM data
+
+## 🤝 Team - MBB 
+
+-Ilie Golban
+-Calin Vasilica
+-Sorin Sindilo
+
+<img width="500px" height="350px" src="static/team.jpg" alt="Team Image">
