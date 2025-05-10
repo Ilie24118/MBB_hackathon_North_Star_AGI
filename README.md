@@ -242,4 +242,4 @@ This project is licensed under the MIT License.
 
 -Sorin Sindilo
 
-<img width="500px" height="450px" src="static/team.jpg" alt="Team Image">
+<img width="700px" height="450px" src="static/team.jpg" alt="Team Image">
