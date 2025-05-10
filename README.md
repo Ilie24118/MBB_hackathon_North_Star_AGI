@@ -2,7 +2,7 @@
 
 A Flask web application that helps users find pubs in Antwerp, Belgium that match their desired vibe using geolocation and AI-powered vibe matching.
 
-<img width="100px" height="auto" src="static/logo_beer_finder.jpeg" alt="Logo Image">
+<img width="100px" height="100px" src="static/logo_beer_finder.jpeg" alt="Logo Image">
 
 ## 📋 Overview
 
