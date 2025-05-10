@@ -10,7 +10,7 @@ Vibe Beer Finder combines geolocation data with generative AI to help users disc
 
 Check out our DEMO live here.
 
-<h2> <a href="[url](http://34.79.62.121/)">LIVE DEMO</a> </h2>
+[LIVE DEMO]([www.google.com](http://34.79.62.121/))
 
 ## ✨ Features
 
