@@ -223,7 +223,7 @@ def haversine(lon1, lat1, lon2, lat2):
 ```
 
 ## 📄 License
-
+Logo
 This project is licensed under the MIT License.
 
 ## 🙏 Acknowledgements
@@ -237,7 +237,9 @@ This project is licensed under the MIT License.
 ## 🤝 Team - MBB 
 
 -Ilie Golban
+
 -Calin Vasilica
+
 -Sorin Sindilo
 
-<img width="500px" height="350px" src="static/team.jpg" alt="Team Image">
+<img width="500px" height="450px" src="static/team.jpg" alt="Team Image">
