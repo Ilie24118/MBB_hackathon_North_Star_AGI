@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Results - Vibe Beer Finder</title>
     <style>
         body {
@@ -50,28 +50,30 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
         .map-container {
             background-color: white;
             padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            height: 500px;
         }
 
+        .map-frame {
+            width: 100%;
+            height: 450px; /* Make this slightly smaller than container */
+            border: none;
+            border-radius: 4px;
+            display: block;
+        }
+        
         .join-container {
             background-color: white;
             padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            height: 250px;
+            margin-top: 1.5rem;
         }
-      
-        .map-frame {
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 4px;
-        }
+
         .vibe-match {
             background-color: #e6f7ff;
             border-left: 4px solid #1890ff;
@@ -91,7 +93,7 @@
             border-bottom: none;
         }
         .pub-name {
-            map-connt-weight: bold;
+            font-weight: bold;
             font-size: 1.1rem;
             margin-bottom: 0.5rem;
         }
@@ -133,39 +135,36 @@
             padding: 0.2rem 0.4rem;
             border-radius: 2px;
         }
-
         .resize {
             width: 100px;
             height: auto;
             border-radius: 10%;
             display: inline-block;
         }
-
     </style>
 </head>
 <body>
     <div class="container">
-
         <div class="header">
-            <img class="resize" src="{{url_for('static', filename='logo_beer_finder.jpeg')}}" />
+            <img class="resize" src="{{ url_for('static', filename='logo_beer_finder.jpeg') }}" />
             <h1>Your Perfect Pub Match</h1>
             <p>Based on your <span class="highlight">{{ vibe }}</span> vibe at coordinates [{{ latitude }}, {{ longitude }}]</p>
         </div>
-        
+
         <div class="results-grid">
             <div class="pub-info">
                 <div class="vibe-match">
                     <h2>🍻 Best Match for Your Vibe</h2>
                     <div class="pub-name">{{ vibe_match.name }}</div>
                     <div class="pub-distance">{{ vibe_match.distance }} from your location</div>
-                    
+
                     {% if vibe_match.explanation %}
                     <div class="attributes" style="margin-top: 1rem;">
                         <strong>Why this matches your vibe:</strong> 
                         <p>{{ vibe_match.explanation }}</p>
                     </div>
                     {% endif %}
-                    
+
                     <div class="attributes">
                         {% for key, value in vibe_match.items() %}
                             {% if key not in ['name', 'distance', 'distance_value', 'coordinates', 'id', 'explanation', 'note'] %}
@@ -174,14 +173,13 @@
                         {% endfor %}
                     </div>
                 </div>
-                
+
                 <h2>All Nearby Pubs</h2>
                 <ul class="pub-list">
                     {% for pub in pub_list %}
                     <li class="pub-item">
                         <div class="pub-name">{{ pub.name }}</div>
                         <div class="pub-distance">{{ pub.distance }} from your location</div>
-                        
                         <div class="attributes">
                             {% for key, value in pub.items() %}
                                 {% if key not in ['name', 'distance', 'distance_value', 'coordinates', 'id', 'explanation', 'note'] and value|string|length < 50 %}
@@ -192,27 +190,26 @@
                     </li>
                     {% endfor %}
                 </ul>
-                
+
                 <a href="/" class="back-btn">New Search</a>
             </div>
-            
-            <div class="map-container">
-                <h2>Interactive Map</h2>
-                <iframe class="map-frame" src="/static/{{ map_file }}"></iframe>
+
+            <div>
+                <div class="map-container">
+                    <h2>Interactive Map</h2>
+                    <iframe class="map-frame" src="/static/{{ map_file }}"></iframe>
+                </div>
+
+                <div class="join-container">
+                    <h2>Find Friends at the same Pub</h2>
+                    <p>Click below to join {{ vibe_match.name }} pub and see who else is vibing there 🍻</p>
+                    <form action="/join_pub" method="POST">
+                        <input type="hidden" name="pub_id" value="{{ vibe_match.id }}">
+                        <button type="submit" class="back-btn">Join This Pub</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="container">
-      <div class="join-container">
-        <h2>Find Friends at the same Pub</h2>
-        <p>Click below to join {{ vibe_match.name }} pub and see who else is vibing there 🍻</p>
-          <form action="/join_pub" method="POST">
-        <input type="hidden" name="pub_id" value="{{ vibe_match.id }}">
-        <button type="submit" class="back-btn">Join This Pub</button>
-        </form>
-      </div>
-    </div>
-
 </body>
 </html>
