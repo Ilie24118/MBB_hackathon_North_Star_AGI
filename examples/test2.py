@@ -12,13 +12,13 @@ def find_benches(dataset_name="ns2agi/antwerp-osm-navigator"):
     def is_bench(example):
         try:
             tags = json.loads(example["tags"]) if example["tags"] != '{}' else {}
-            return tags.get("natural") == "tree"
+            return tags.get("amenity") == "pub"
         except:
             return False
     
     # Filter for benches
     bench_data = dataset.filter(is_bench)
-    print(f"Found {len(bench_data)} trees in Antwerp")
+    print(f"Found {len(bench_data)} pubs in Antwerp")
     
     # Convert to pandas DataFrame
     bench_df = bench_data.to_pandas()
@@ -61,7 +61,7 @@ def visualize_benches_with_heatmap(bench_df):
             ).add_to(marker_cluster)
     
     # Save and display
-    m.save("antwerp_trees_heatmap.html")
+    m.save("antwerp_pub_heatmap.html")
     return m
 
 # Visualize the waste baskets with heatmap

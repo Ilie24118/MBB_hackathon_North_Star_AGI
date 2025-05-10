@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - Vibe Beer Finder</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .header {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        h1 {
+            color: #FF8C00;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            color: #FF8C00;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        .results-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        @media (max-width: 768px) {
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .pub-info {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .map-container {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            height: 500px;
+        }
+        .map-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 4px;
+        }
+        .vibe-match {
+            background-color: #e6f7ff;
+            border-left: 4px solid #1890ff;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 4px 4px 0;
+        }
+        .pub-list {
+            list-style: none;
+            padding: 0;
+        }
+        .pub-item {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .pub-item:last-child {
+            border-bottom: none;
+        }
+        .pub-name {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .pub-distance {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .back-btn {
+            background-color: #FF8C00;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        .back-btn:hover {
+            background-color: #E67E00;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #f1f1f1;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .attributes {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .highlight {
+            background-color: #ffea8a;
+            padding: 0.2rem 0.4rem;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Your Perfect Pub Match</h1>
+            <p>Based on your <span class="highlight">{{ vibe }}</span> vibe at coordinates [{{ latitude }}, {{ longitude }}]</p>
+        </div>
+        
+        <div class="results-grid">
+            <div class="pub-info">
+                <div class="vibe-match">
+                    <h2>🍻 Best Match for Your Vibe</h2>
+                    <div class="pub-name">{{ vibe_match.name }}</div>
+                    <div class="pub-distance">{{ vibe_match.distance }} from your location</div>
+                    
+                    {% if vibe_match.explanation %}
+                    <div class="attributes" style="margin-top: 1rem;">
+                        <strong>Why this matches your vibe:</strong> 
+                        <p>{{ vibe_match.explanation }}</p>
+                    </div>
+                    {% endif %}
+                    
+                    <div class="attributes">
+                        {% for key, value in vibe_match.items() %}
+                            {% if key not in ['name', 'distance', 'distance_value', 'coordinates', 'id', 'explanation', 'note'] %}
+                                <div><strong>{{ key }}:</strong> {{ value }}</div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                
+                <h2>All Nearby Pubs</h2>
+                <ul class="pub-list">
+                    {% for pub in pub_list %}
+                    <li class="pub-item">
+                        <div class="pub-name">{{ pub.name }}</div>
+                        <div class="pub-distance">{{ pub.distance }} from your location</div>
+                        
+                        <div class="attributes">
+                            {% for key, value in pub.items() %}
+                                {% if key not in ['name', 'distance', 'distance_value', 'coordinates', 'id', 'explanation', 'note'] and value|string|length < 50 %}
+                                    <span class="tag">{{ key }}: {{ value }}</span>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+                
+                <a href="/" class="back-btn">New Search</a>
+            </div>
+            
+            <div class="map-container">
+                <h2>Interactive Map</h2>
+                <iframe class="map-frame" src="/static/{{ map_file }}"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

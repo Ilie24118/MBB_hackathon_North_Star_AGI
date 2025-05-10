@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Beer Finder</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            margin: 2rem;
+        }
+        h1 {
+            color: #FF8C00;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #FF8C00;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+            margin-top: 1rem;
+        }
+        button:hover {
+            background-color: #E67E00;
+        }
+        .location-btn {
+            background-color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+        .location-btn:hover {
+            background-color: #45a049;
+        }
+        .loading {
+            display: none;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border-left-color: #09f;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        .vibelist {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        .vibe-chip {
+            background-color: #f1f1f1;
+            border-radius: 16px;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .vibe-chip:hover {
+            background-color: #e0e0e0;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .info {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            background-color: #e6f7ff;
+            border-left: 4px solid #1890ff;
+            border-radius: 4px;
+        }
+        
+        .resize {
+            width: 300px;
+            height: auto;
+            border-radius: 10%;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <img class="resize" src="{{url_for('static', filename='logo_beer_finder.jpeg')}}" />
+
+        <h1>Vibe Beer Finder</h1>
+        <p>Find the perfect pub in Antwerp that matches your vibe!</p>
+        
+        <button id="getCurrentLocation" class="location-btn">Use My Current Location</button>
+        
+        <form method="POST" action="/" id="searchForm">
+            <div class="form-group">
+                <label for="latitude">Latitude:</label>
+                <input type="number" id="latitude" name="latitude" step="any" required placeholder="e.g. 51.2213" value="51.2213">
+                <small>Default is near Antwerp Central Station</small>
+            </div>
+            <div class="form-group">
+                <label for="longitude">Longitude:</label>
+                <input type="number" id="longitude" name="longitude" step="any" required placeholder="e.g. 4.4151" value="4.4151">
+                <small>Default is near Antwerp Central Station</small>
+            </div>
+            <div class="form-group">
+                <label for="vibe">What's your vibe today?</label>
+                <input type="text" id="vibe" name="vibe" required placeholder="e.g. cozy, lively, hipster">
+                <div class="vibelist">
+                    <span class="vibe-chip" onclick="setVibe('Cozy')">Cozy</span>
+                    <span class="vibe-chip" onclick="setVibe('Lively')">Lively</span>
+                    <span class="vibe-chip" onclick="setVibe('Local')">Local</span>
+                    <span class="vibe-chip" onclick="setVibe('Historic')">Historic</span>
+                    <span class="vibe-chip" onclick="setVibe('Hipster')">Hipster</span>
+                    <span class="vibe-chip" onclick="setVibe('Romantic')">Romantic</span>
+                </div>
+            </div>
+            <button type="submit">Find My Perfect Pub</button>
+        </form>
+        
+        <div class="loading" id="loadingIndicator">
+            <div class="spinner"></div>
+            <p>Looking for pubs that match your vibe...</p>
+        </div>
+
+        <div class="info">
+            <p><strong>Note:</strong> This app focuses on pubs in Antwerp, Belgium. For best results, use coordinates within or near Antwerp.</p>
+        </div>
+    </div>
+
+    <script>
+        function setVibe(vibe) {
+            document.getElementById('vibe').value = vibe;
+        }
+
+        document.getElementById('getCurrentLocation').addEventListener('click', function() {
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            loadingIndicator.style.display = 'block';
+            
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    document.getElementById('latitude').value = position.coords.latitude;
+                    document.getElementById('longitude').value = position.coords.longitude;
+                    loadingIndicator.style.display = 'none';
+                }, function(error) {
+                    alert('Error getting your location: ' + error.message);
+                    loadingIndicator.style.display = 'none';
+                });
+            } else {
+                alert('Geolocation is not supported by your browser');
+                loadingIndicator.style.display = 'none';
+            }
+        });
+
+        document.getElementById('searchForm').addEventListener('submit', function() {
+            document.getElementById('loadingIndicator').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

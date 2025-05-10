@@ -12,13 +12,13 @@ def find_benches(dataset_name="ns2agi/antwerp-osm-navigator"):
     def is_bench(example):
         try:
             tags = json.loads(example["tags"]) if example["tags"] != '{}' else {}
-            return tags.get("amenity") == "waste_basket"
+            return tags.get("amenity") == "pub"
         except:
             return False
     
     # Filter for benches
     bench_data = dataset.filter(is_bench)
-    print(f"Found {len(bench_data)} waste_baskets in Antwerp")
+    print(f"Found {len(bench_data)} pub in Antwerp")
     
     # Convert to pandas DataFrame
     bench_df = bench_data.to_pandas()
@@ -51,11 +51,11 @@ def visualize_benches(bench_df):
             folium.Marker(
                 location=[bench["lat"], bench["lon"]],
                 popup=popup_text,
-                icon=folium.Icon(color="green", icon="tree-deciduous", prefix="fa")
+                icon=folium.Icon(color="green", icon="beer", prefix="fa")
             ).add_to(marker_cluster)
     
     # Save and display
-    m.save("antwerp_waste_basket.html")
+    m.save("antwerp_pub.html")
     return m
 
 # Visualize the benches

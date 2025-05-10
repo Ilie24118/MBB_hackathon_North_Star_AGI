@@ -16,8 +16,13 @@ if not api_key:
 genai.configure(api_key=api_key)
 
 model = genai.GenerativeModel("gemini-2.0-flash")
-prompt = "how do i win a hackathon? the provided data is an OSM export of Antwerp - do you have any ideas? GIVE ME THE BEST IDEAS, the shirt reward looks really good and I really want it"
+
+"""
+prompt = "I want a pub witch a cozy    We have this pub in Antwerp: Blauwmoezel give me a short summary of it and the vibe. Give the in 5 bullets points the vibe. Only the name."
+
 response = model.generate_content(prompt)
 
 print(f"Prompt: {prompt}\n")
 print(f"Response: {response.text}")
+
+"""

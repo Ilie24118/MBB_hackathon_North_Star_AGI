@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b5b0e65ffe15cea9aff2e1552887caaf {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b5b0e65ffe15cea9aff2e1552887caaf" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b5b0e65ffe15cea9aff2e1552887caaf = L.map(
+                "map_b5b0e65ffe15cea9aff2e1552887caaf",
+                {
+                    center: [51.2192, 4.3917],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4f41994729b951bd4493a01ec1b84972 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4f41994729b951bd4493a01ec1b84972.addTo(map_b5b0e65ffe15cea9aff2e1552887caaf);
+        
+    
+            var marker_e3f5328312bc24cbb1750659dbd30b7d = L.marker(
+                [51.2192, 4.3917],
+                {
+}
+            ).addTo(map_b5b0e65ffe15cea9aff2e1552887caaf);
+        
+    
+            var icon_1e83d67db72a32af2ab72726ad52087e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "user",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_372af0e9f09059add7ac9877cbe83111 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_08b79cf01963c4c77a7c1c7484a4fda0 = $(`<div id="html_08b79cf01963c4c77a7c1c7484a4fda0" style="width: 100.0%; height: 100.0%;">Your Location</div>`)[0];
+                popup_372af0e9f09059add7ac9877cbe83111.setContent(html_08b79cf01963c4c77a7c1c7484a4fda0);
+            
+        
+
+        marker_e3f5328312bc24cbb1750659dbd30b7d.bindPopup(popup_372af0e9f09059add7ac9877cbe83111)
+        ;
+
+        
+    
+    
+                marker_e3f5328312bc24cbb1750659dbd30b7d.setIcon(icon_1e83d67db72a32af2ab72726ad52087e);
+            
+    
+            var marker_cluster_d39cbcb20d99b9439bc176520a7d144c = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_d251c122516336017625fcb8c32d7ed4 = L.marker(
+                [51.2177228, 4.3949476],
+                {
+}
+            ).addTo(marker_cluster_d39cbcb20d99b9439bc176520a7d144c);
+        
+    
+            var icon_989d102e440682c12c69ca875d9f5501 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "beer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_89cc98072b8b85578daf08828efe614f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bbb47a7dc88084bb68d1ca174fbb26f5 = $(`<div id="html_bbb47a7dc88084bb68d1ca174fbb26f5" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Crazy J<br><b>Distance:</b> 0.28 km<br><b>Matches Your Vibe:</b> Crazy J, based on its name alone, suggests a high-energy and potentially boisterous atmosphere, aligning well with the "Lively" vibe. It implies a place where things are a bit wild and fun.<br><b>amenity:</b> pub<br><b>internet_access:</b> wlan<br><b>internet_access:fee:</b> yes<br><b>outdoor_seating:</b> yes<br><b>website:</b> https://crazyjantwerp.com<br><b>wheelchair:</b> limited<br></div>`)[0];
+                popup_89cc98072b8b85578daf08828efe614f.setContent(html_bbb47a7dc88084bb68d1ca174fbb26f5);
+            
+        
+
+        marker_d251c122516336017625fcb8c32d7ed4.bindPopup(popup_89cc98072b8b85578daf08828efe614f)
+        ;
+
+        
+    
+    
+                marker_d251c122516336017625fcb8c32d7ed4.setIcon(icon_989d102e440682c12c69ca875d9f5501);
+            
+    
+            var marker_6d18b7d51d95ffe83d7d3901d53b1b08 = L.marker(
+                [51.2189185, 4.3963179],
+                {
+}
+            ).addTo(marker_cluster_d39cbcb20d99b9439bc176520a7d144c);
+        
+    
+            var icon_011ca40312fc3c8c6c27ef3c9032caf7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "beer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1c2b27e96f1e6f1c29c4ca9756634d20 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b2be1c7780cfb4db66f42990b730849 = $(`<div id="html_2b2be1c7780cfb4db66f42990b730849" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Het Zand<br><b>Distance:</b> 0.32 km<br><b>amenity:</b> pub<br><b>check_date:</b> 2023-04-08<br><b>outdoor_seating:</b> yes<br><b>website:</b> https://hetzand.be<br></div>`)[0];
+                popup_1c2b27e96f1e6f1c29c4ca9756634d20.setContent(html_2b2be1c7780cfb4db66f42990b730849);
+            
+        
+
+        marker_6d18b7d51d95ffe83d7d3901d53b1b08.bindPopup(popup_1c2b27e96f1e6f1c29c4ca9756634d20)
+        ;
+
+        
+    
+    
+                marker_6d18b7d51d95ffe83d7d3901d53b1b08.setIcon(icon_011ca40312fc3c8c6c27ef3c9032caf7);
+            
+    
+            var marker_5e3fe1b4a03c26577f973501114f99ae = L.marker(
+                [51.218887, 4.3964132],
+                {
+}
+            ).addTo(marker_cluster_d39cbcb20d99b9439bc176520a7d144c);
+        
+    
+            var icon_d7721991b8a00ca43081d02f8cd40494 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "beer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f5bd798d69970b52791849636cd89b02 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a0616c05f846b79173439efa112e1895 = $(`<div id="html_a0616c05f846b79173439efa112e1895" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Den Abjaar<br><b>Distance:</b> 0.33 km<br><b>amenity:</b> pub<br><b>check_date:</b> 2023-04-08<br><b>outdoor_seating:</b> yes<br><b>website:</b> http://www.denabjaar.be<br></div>`)[0];
+                popup_f5bd798d69970b52791849636cd89b02.setContent(html_a0616c05f846b79173439efa112e1895);
+            
+        
+
+        marker_5e3fe1b4a03c26577f973501114f99ae.bindPopup(popup_f5bd798d69970b52791849636cd89b02)
+        ;
+
+        
+    
+    
+                marker_5e3fe1b4a03c26577f973501114f99ae.setIcon(icon_d7721991b8a00ca43081d02f8cd40494);
+            
+    
+            var marker_d156aa92ce8ed3bb8dab0d53fa96130e = L.marker(
+                [51.2198264, 4.3964706],
+                {
+}
+            ).addTo(marker_cluster_d39cbcb20d99b9439bc176520a7d144c);
+        
+    
+            var icon_37f14c6c342f53df525dde2ec795126e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "beer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fbd9521083ec4edc9d97bddf05f08c71 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2d61e84434cb28ad5716cc8035a2d4b2 = $(`<div id="html_2d61e84434cb28ad5716cc8035a2d4b2" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Café Beveren<br><b>Distance:</b> 0.34 km<br><b>addr:housenumber:</b> 2<br><b>addr:postcode:</b> 2000<br><b>addr:street:</b> Vlasmarkt<br><b>amenity:</b> pub<br><b>check_date:</b> 2024-01-17<br><b>contact:facebook:</b> https://www.facebook.com/cafebeverenantwerpen/<br><b>opening_hours:</b> Th 13:00-00:00, Fr,Sa 13:00-03:00, Su 13:00-01:00<br><b>wheelchair:</b> yes<br></div>`)[0];
+                popup_fbd9521083ec4edc9d97bddf05f08c71.setContent(html_2d61e84434cb28ad5716cc8035a2d4b2);
+            
+        
+
+        marker_d156aa92ce8ed3bb8dab0d53fa96130e.bindPopup(popup_fbd9521083ec4edc9d97bddf05f08c71)
+        ;
+
+        
+    
+    
+                marker_d156aa92ce8ed3bb8dab0d53fa96130e.setIcon(icon_37f14c6c342f53df525dde2ec795126e);
+            
+    
+            var marker_507ccee72208757c90bc54d6fd3f9912 = L.marker(
+                [51.218685, 4.3971518],
+                {
+}
+            ).addTo(marker_cluster_d39cbcb20d99b9439bc176520a7d144c);
+        
+    
+            var icon_4f30222ae8c0d84209eeb229d21e7415 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "beer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3a01a924ffd1a139cc1424c5a1d4dd45 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_47a20d91f80fe51fe3afb1e38df59815 = $(`<div id="html_47a20d91f80fe51fe3afb1e38df59815" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Kleine Tunnel<br><b>Distance:</b> 0.38 km<br><b>amenity:</b> pub<br><b>entrance:kerb:height:</b> 0.05<br><b>entrance:ramp:</b> no<br><b>entrance:step_count:</b> 1<br><b>entrance:width:</b> 0.95<br><b>toilets:wheelchair:</b> no<br><b>wheelchair:turning_circle:</b> yes<br></div>`)[0];
+                popup_3a01a924ffd1a139cc1424c5a1d4dd45.setContent(html_47a20d91f80fe51fe3afb1e38df59815);
+            
+        
+
+        marker_507ccee72208757c90bc54d6fd3f9912.bindPopup(popup_3a01a924ffd1a139cc1424c5a1d4dd45)
+        ;
+
+        
+    
+    
+                marker_507ccee72208757c90bc54d6fd3f9912.setIcon(icon_4f30222ae8c0d84209eeb229d21e7415);
+            
+    
+            marker_cluster_d39cbcb20d99b9439bc176520a7d144c.addTo(map_b5b0e65ffe15cea9aff2e1552887caaf);
+        
+</script>
+</html>
