@@ -26,6 +26,7 @@ Vibe Beer Finder combines geolocation data with generative AI to help users disc
 - **Distance Calculation**: Haversine formula
 
 ## 📷 Screenshots
+![](https://github.com/Ilie24118/MBB_hackathon_North_Star_AGI/blob/main/screenshots/screen1.png =400x)
 ![](screenshots/screen1.png =400x)
 
 ![](screenshots/screen2.png =400x) 
